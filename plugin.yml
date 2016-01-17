@@ -1,0 +1,7 @@
+main: com.gigabytedx.namechange.Main
+version: 1.0
+name: NPC_Name_Change
+
+commands:
+  setnpcname:
+    description: change the name of an npc
