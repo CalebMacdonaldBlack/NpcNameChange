@@ -23,8 +23,7 @@ public class Interact implements Listener {
 		Entity entity = event.getRightClicked();
 		
 		if(plugin.nameSetting.containsKey(player) && entity instanceof LivingEntity){
-			entity.setCustomName(ChatColor.GOLD + plugin.nameSetting.get(player));
-			entity.setCustomNameVisible(true);
+			((Player) entity).setDisplayName(ChatColor.GOLD + plugin.nameSetting.get(player));
 			plugin.nameSetting.remove(player);
 			player.sendMessage(ChatColor.GREEN + plugin.getDescription().getName() + ChatColor.BLUE + "Name change successful");
 		}
